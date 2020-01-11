@@ -77,4 +77,6 @@ gulp.task('watch', () => { // Запуск локального хостинга
 
 
 //Таск по умолчанию, Запускает del, styles, scripts и watch
-gulp.task('default', gulp.series(gulp.parallel('styles', 'scripts', 'image-compress'), 'watch'));
+gulp.task('default', gulp.series(gulp.parallel('styles', 'scripts'), 'watch'));
+
+gulp.task('build', gulp.series(gulp.parallel('styles', 'scripts', 'image-compress'), 'watch'));
