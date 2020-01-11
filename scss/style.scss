@@ -10,12 +10,14 @@
     position: relative;
 }
 header{
-    height: 130px;
+    height: 108px; // update
     .header{
         align-items: center;
-        padding-top: 30px;
+        padding-top: 30px; // update
         .contacts{
             text-align: right;
+            line-height: 18px; // update
+            margin-top: 6px;
             h3{
                 font-size: 18px;
             }
@@ -30,6 +32,10 @@ header{
             border: 2px solid $black;
             cursor: pointer;
             background-color: $white;
+            transition: all 0.3s;
+            &:hover{
+                background-color: $yellow;
+            }
         }
     }
     .nav_top{
@@ -45,14 +51,24 @@ header{
         li{ 
             z-index: 9999;
             display: block;
-            padding: 24px;
+            transition: all 0.2s;
             &:first-child{
-                padding-left: 70px;
+                a{
+                    padding-left: 70px;
+                }
             }
             &:last-child{
-                padding-right: 70px;
+                a{
+                    padding-right: 70px;
+                }
+
+            }
+            &:hover{
+                background-color: $grey;
             }
             a{
+                display: block;
+                padding: 24px;
                 text-decoration: none;
                 color: $black;
                 font-size: 16px;
@@ -67,7 +83,7 @@ header{
     height: 540px;
     background: url(/build/img/эксковатор.png)  center no-repeat;
     background-position: 50% 15%;
-    background-color: $black;
+    background-color: rgb(28, 28, 28);
 
     &_info_text{
         h1{
@@ -96,6 +112,11 @@ header{
             background-color: $yellow;
             border: 2px solid $black;
             border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            &:hover{
+                background-color: rgb(255, 234, 0);
+            }
         }
         .link_top_info{
             color: $white;
