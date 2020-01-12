@@ -49,9 +49,9 @@ gulp.task('libs', () =>{ // Подключение библиотек
 });
 
 gulp.task('pages', () => { // Добавление в сборку html/php файлов.
-    return gulp.src('./**/*.html')
+    return gulp.src('./*.html')
     .pipe(gulp.dest('./build')),
-    gulp.src('./**/*.php')
+    gulp.src('./*.php')
     .pipe(gulp.dest('./build'));
 });
 
