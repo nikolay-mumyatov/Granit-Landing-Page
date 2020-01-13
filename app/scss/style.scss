@@ -81,7 +81,7 @@ header{
 .top{
     width: 100%;
     height: 540px;
-    background: url(/build/img/эксковатор.png)  center no-repeat;
+    background: url(/build/img/wallpaper_top.png)  center no-repeat;
     background-position: 50% 15%;
     background-color: rgb(28, 28, 28);
 
@@ -128,6 +128,186 @@ header{
             }
         }
     }
-    
+}
 
+.wrapper{
+    h2{
+        text-transform: uppercase;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 60px;
+    }
+    .presence{
+        .box{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            &_item{
+                border: 1px solid #e8e8e8;
+                flex: 0 0 250px;
+                text-align: center;
+                margin: 10px;
+                padding: 20px;
+                img{
+                    width: 260px;
+                    height: 140px;
+                }
+                h4{
+                    font-size: 16px;
+                    margin-top: 45px;
+                    margin-bottom: 20px;
+                }
+                p{
+                    color: $grey;
+                    font-size: 13px;
+                }
+                h3{
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+                button{
+                    background-color: $yellow;
+                    padding: 20px 56px 20px 56px;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: rgb(255, 234, 0);
+                    }
+                }
+            }
+        }
+    }
+    .advantage{
+        background-color: hsl(0, 0%, 96%);
+        margin-top: 100px;
+        padding-bottom: 100px;
+        h2{
+            padding-top: 100px;
+        }
+        .box{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            &_item{
+                border: 1px solid #e8e8e8;
+                flex: 0 0 300px;
+                background-color: $white;
+                text-align: center;
+                padding: 40px;
+                margin: 10px;
+                img{
+                    min-width: 47px;
+                    min-height: 50px;
+                }
+                p{
+                    color: $grey;
+                    font-size: 13px;
+                }
+                h3{
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    .popular_goods{
+        margin-top: 100px;
+        .box{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            &_item{
+                border: 1px solid #e8e8e8;
+                flex: 0 0 220px;
+                background-color: $white;
+                text-align: center;
+                padding: 20px;
+                margin: 10px;
+                &_img-goods{
+                    position: relative;
+                    .sale{
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+                        background-color: $red;
+                        width: 60px;
+                        padding: 4px 0 4px 0;
+                        color: $white;
+                        text-align: center;
+                    }
+                }
+                p{
+                    margin: 8px 0 8px 0;
+                }
+                &_price{
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    small{
+                        color: $grey;
+                        text-decoration: line-through;
+                    }
+                    p{
+                        font-size: 18px;
+                        margin-left: 10px;
+                    }
+                    p[data-sale]{
+                        color: $red;
+                    }
+                }
+                button{
+                    background-color: $yellow;
+                    padding: 16px 50px 16px 50px;
+                    margin-top: 20px;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: rgb(255, 234, 0);
+                    }
+                }
+                
+            }
+        }
+    }
+    .service{
+        background-color: hsl(0, 0%, 96%);
+        margin-top: 100px;
+        padding-bottom: 100px;
+        h2{
+            padding-top: 100px;
+        }
+        .box{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            &_item{
+                border: 1px solid #e8e8e8;
+                flex: 0 0 300px;
+                background-color: $white;
+                text-align: center;
+                padding: 24px;
+                margin: 10px;
+                img{
+                    min-height: 121px;
+                    max-width: 250px;
+                }
+                a{
+                    text-decoration: none;
+                    color: $black;
+                    h3{
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                        font-size: 16px;
+                    }
+                    &:hover{
+                        color: $yellow;
+                    }
+                }
+            }
+        }
+    }
 }

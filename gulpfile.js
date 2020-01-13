@@ -83,12 +83,12 @@ gulp.task('watch', () => { // Запуск локального хостинга
         port: 3000
     });
         // Отслеживание изменений в файлах и перезапись конечного результата.
-    gulp.watch('./scss/**/*', gulp.series('styles'));
-    gulp.watch('./js/**/*', gulp.series('scripts'));
-    gulp.watch("./js/**/*.js").on('change', browserSync.reload); //
-    gulp.watch("./**/*.html").on('change', browserSync.reload); // Обновление в браузере при изменении файлов.
-    gulp.watch("./**/*.php").on('change', browserSync.reload); //
-    gulp.watch('./img/**', gulp.series('image-compress')); // Отслеживание добавления/изменений изображений.
+    gulp.watch('./app/scss/**/*', gulp.series('styles'));
+    gulp.watch('./app/js/**/*', gulp.series('scripts'));
+    gulp.watch("./app/js/**/*.js").on('change', browserSync.reload); //
+    gulp.watch("./app/**/*.html").on('change', browserSync.reload); // Обновление в браузере при изменении файлов.
+    gulp.watch("./app/**/*.php").on('change', browserSync.reload); //
+    gulp.watch('./app/img/**', gulp.series('image-compress')); // Отслеживание добавления/изменений изображений.
 });
 
 
