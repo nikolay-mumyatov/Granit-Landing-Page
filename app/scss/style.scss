@@ -12,6 +12,61 @@
     margin: 0 auto;
 }
 
+.menu{
+	position: fixed;
+	width: 40%;
+	height: 50vh;
+	background-color: rgba(4, 0, 7, 0.941);
+	left: 0;
+	margin: 0;
+	top: 0;
+	z-index: 99;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    transform: translateX(-100%);
+    transition: 0.5s all;
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        line-height: 3;
+        li{
+            a{
+                text-decoration: none;
+                font-size: 20px;
+                color: $yellow;
+                &:hover{
+                    color: rgb(255, 234, 0);
+                }
+            }
+        }
+    }
+    .close-btn{
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        font-size: 2em;
+        transition: all 0.2s;
+        transform-origin: 50% 53%;
+        display: block;
+        line-height: 3rem;
+        text-align: center;
+        width: 3rem;
+        height: 3rem;
+        text-decoration: none;
+        color: $yellow;
+        &:hover{
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.menu_active{
+    transform: translateX(-20%);
+}
+
+
 header{
     position: relative;
     .header{
@@ -20,8 +75,25 @@ header{
         flex-wrap: wrap;
         margin-top: 30px;
         align-items: center;
-        .humburger_menu{
+        .humburger_btn{
             display: none;
+            width: 28px;
+            height: 20px;
+            cursor: pointer;
+            padding: 5px;
+            transition: 0.2s all;
+            &:hover span:nth-child(1) {
+                transform-origin: 0% 0%;
+                transform: rotate(31deg) translateX(13px) translateY(-7px);
+                width: 14px;
+                margin-right: 0;
+            }
+            &:hover span:nth-child(3) {
+                transform-origin: 0% 0%;
+                transform: rotate(-31deg) translateX(13px) translateY(7px);
+                width: 14px;
+                margin-left: 0;
+            }
             span{
                 display: block;
                 width: 28px;
@@ -29,13 +101,22 @@ header{
                 margin-bottom: 6px;
                 margin-right: 20px;
                 background-color: $black;
+                transition: 0.3s all;
                 &:last-child{
                     margin-bottom: 0;
+                }
+                &:nth-child(1) {
+                    transform: translateY(-2px);
+                }
+                &:nth-child(3) {
+                    transform: translateY(2px);
                 }
             }
         }
         .header_logo{
-            flex-basis: 60%;
+            flex-basis: 65%;
+            padding-bottom: 4px;
+            // padding-left: 20px;
             a{
                 display: block;
                 align-items: center;
@@ -44,9 +125,10 @@ header{
         .header_tel{
             flex-basis: 20%;
             text-align: end;
-            margin-right: 20px;
+            // margin-right: 20px;
             h3{
                 font-size: 16px;
+                // width: 110px;
             }
             small{
                 color: $grey;
@@ -180,6 +262,7 @@ header{
                 text-align: center;
                 margin: 0 10px 10px 10px;
                 padding: 20px;
+                margin-bottom: 20px;
                 img{
                     width: 260px;
                     height: 140px;
@@ -230,6 +313,7 @@ header{
                 text-align: center;
                 padding: 40px;
                 margin: 10px;
+                margin-bottom: 20px;
                 img{
                     min-width: 47px;
                     min-height: 50px;

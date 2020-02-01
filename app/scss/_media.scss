@@ -3,6 +3,23 @@
         .header{
             margin-left: 2vh;
             margin-right: 2vh;
+            .header_logo{
+                flex-basis: 55%;
+                padding-bottom: 4px;
+            }
+            .header_tel{
+                flex-basis: 25%;
+                text-align: end;
+            }
+            .header_btn{
+                flex-basis: 15%;
+                .btn_contacts{
+                    padding: 10px 10px 10px 10px;
+                    @media (min-width: 828px) and (max-width: 996px) {
+                        padding: 5px 5px 5px 5px;
+                    }
+                }
+            }
         }
     }
     
@@ -34,7 +51,7 @@
 
     header{
         .header{
-            .humburger_menu{
+            .humburger_btn{
                 display: block;
             }
             .header_tel{
@@ -63,6 +80,58 @@
             }
             .contact_map{
                 display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 643px) {
+
+    header{
+        .header{
+            .humburger_btn{
+                display: block;
+            }
+            .header_logo{
+                flex-basis: 20%;
+                a{
+                    display: block;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 597px) {
+
+    header{
+        .header{
+            justify-content: flex-start;
+            .humburger_btn{
+                display: block;
+                margin-right: 20px;
+            }
+            .header_logo{
+                flex-basis: 30%;
+                width: 100px;
+                a{
+                    display: block;
+                    align-items: center;
+                }
+            }
+            .header_tel{
+                display: none;
+                flex-basis: 30%;
+                text-align: end;
+                margin-right: 20px;
+                h3{
+                    font-size: 14px;
+                }
+                small{
+                    display: none;
+                    color: $grey;
+                }
             }
         }
     }
