@@ -13,6 +13,7 @@
 }
 
 header{
+    position: relative;
     .header{
         display: flex;
         justify-content: space-between;
@@ -35,6 +36,10 @@ header{
         }
         .header_logo{
             flex-basis: 60%;
+            a{
+                display: block;
+                align-items: center;
+            }
         }
         .header_tel{
             flex-basis: 20%;
@@ -64,164 +69,95 @@ header{
         }
     }
     nav{
+        position: relative;
+        max-width: 1140px;
 		list-style: none;
-        margin-top: 25px;
-        background-color: $yellow;
+        margin-top: 15px;
         justify-content: space-around;
         ul{
+            z-index: 9999;
+            position: absolute;
+            right: 0px;
+            left: 0px;
+            background-color: $yellow;
             display: flex;
             flex-wrap: wrap;
-            // justify-content: space-around;
             list-style: none;
             li{
                 transition: all 0.2s;
-                // max-width: 16.66%;
+                min-width: 16.66%;
                 text-align: center;
-                &:hover{
-                    background-color: $grey;
-                }
                 a{
-                    // width: 100%;
                     padding: 24px;
                     display: block;
                     text-decoration: none;
                     color: $black;
                     font-size: 16px;
+                    &:hover{
+                        background-color: $grey;
+                    }
                 }
             }
         }
-        // li{ 
-        //     display: flex;
-        //     flex-wrap: wrap;
-        //     // z-index: 9999;
-        //     // display: block;
-            
-        // }
+    }
+    .top{
+        margin-top: 48px;
+        width: 100%;
+        height: 540px;
+        background: url(/build/img/wallpaper_top.png)  center no-repeat;
+        background-position: 60% 15%;
+        background-color: rgb(28, 28, 28);
+
+        &_info{
+            margin-left: 4vh;
+        }
+
+        &_info_text{
+            h1{
+                padding-top: 170px;
+                color: $white;
+                text-transform: uppercase;
+                font-size: 36px;
+                opacity: 0.9;
+                margin: 0;
+            }
+            p{
+                margin-top: 30px;
+                max-width: 240px;
+                color: $white;
+                font-size: 14px;
+                opacity: 0.9;
+            }
+        }
+
+        &_info_link{
+            margin-top: 48px;
+            display: flex;
+            align-items: center;
+            .btn_top_info{
+                padding: 16px 22px 16px 22px;
+                color: $black;
+                background-color: $yellow;
+                border: 2px solid $black;
+                border-radius: 6px;
+                cursor: pointer;
+                transition: all 0.2s;
+                &:hover{
+                    background-color: rgb(255, 234, 0);
+                }
+            }
+            .link_top_info{
+                color: $white;
+                opacity: 0.9;
+                margin-left: 30px;
+                a{
+                    color: $white;
+                    cursor: pointer;
+                }
+            }
+        }
     }
 }
-
-// header{
-//     height: 108px; // update
-//     .header{
-//         align-items: center;
-//         padding-top: 30px; // update
-//         .contacts{
-//             text-align: right;
-//             line-height: 18px; // update
-//             margin-top: 6px;
-//             h3{
-//                 font-size: 18px;
-//             }
-//             p{
-//                 font-size: 12px;
-//             color: $grey;
-//             }
-//         }
-//         .btn_contacts{
-//             align-items: flex-end;
-//             padding: 10px 20px 10px 18px;
-//             border: 2px solid $black;
-//             cursor: pointer;
-//             background-color: $white;
-//             transition: all 0.3s;
-//             &:hover{
-//                 background-color: $yellow;
-//             }
-//         }
-//     }
-//     .nav_top{
-//         position: absolute;
-//         right: 15px;
-//         left: 15px;
-// 		   list-style: none;
-//         margin-top: 25px;
-//         background-color: $yellow;
-//         display: flex;
-//         flex-wrap: wrap;
-//         justify-content: space-around;
-//         li{ 
-//             z-index: 9999;
-//             display: block;
-//             transition: all 0.2s;
-//             &:first-child{
-//                 a{
-//                     padding-left: 70px;
-//                 }
-//             }
-//             &:last-child{
-//                 a{
-//                     padding-right: 70px;
-//                 }
-
-//             }
-//             &:hover{
-//                 background-color: $grey;
-//             }
-//             a{
-//                 display: block;
-//                 padding: 24px;
-//                 text-decoration: none;
-//                 color: $black;
-//                 font-size: 16px;
-//             }
-//         }
-       
-//     }
-// }
-
-// .top{
-//     width: 100%;
-//     height: 540px;
-//     background: url(/build/img/wallpaper_top.png)  center no-repeat;
-//     background-position: 50% 15%;
-//     background-color: rgb(28, 28, 28);
-
-//     &_info_text{
-//         h1{
-//             padding-top: 170px;
-//             color: $white;
-//             text-transform: uppercase;
-//             font-size: 36px;
-//             opacity: 0.9;
-//         }
-//         p{
-//             margin-top: 30px;
-//             max-width: 240px;
-//             color: $white;
-//             font-size: 14px;
-//             opacity: 0.9;
-//         }
-//     }
-
-//     &_info_link{
-//         margin-top: 48px;
-//         display: flex;
-//         align-items: center;
-//         .btn_top_info{
-//             padding: 16px 22px 16px 22px;
-//             color: $black;
-//             background-color: $yellow;
-//             border: 2px solid $black;
-//             border-radius: 6px;
-//             cursor: pointer;
-//             transition: all 0.2s;
-//             &:hover{
-//                 background-color: rgb(255, 234, 0);
-//             }
-//         }
-//         .link_top_info{
-//             color: $white;
-//             opacity: 0.9;
-//             margin-left: 30px;
-//             a{
-//                 color: $white;
-//                 cursor: pointer;
-//             }
-//         }
-//     }
-// }
-
-
 
 .wrapper{
     h2{
@@ -242,7 +178,7 @@ header{
                 border: 1px solid #e8e8e8;
                 flex: 0 0 250px;
                 text-align: center;
-                margin: 0 20px 10px 20px;
+                margin: 0 10px 10px 10px;
                 padding: 20px;
                 img{
                     width: 260px;
@@ -422,6 +358,9 @@ header{
                 margin-left: 110px;
             }
         }
+        .contact_map{
+            width: 650px;
+        }
         &_info{
             background-color: $white;
             padding: 60px;
@@ -486,6 +425,9 @@ footer{
     background-color: $footer;
     padding: 40px;
     .footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         a{
             display: block;
             margin-bottom: 10px;
@@ -496,7 +438,7 @@ footer{
         }
         &_contacts{
             text-align: right;
-            line-height: 18px; // update
+            line-height: 18px;
             margin-top: 6px;
             h3{
                 font-size: 18px;
@@ -504,7 +446,7 @@ footer{
             }
             p{
                 font-size: 12px;
-            color: $grey;
+                color: $grey;
             }
             &_btn{
                 align-items: flex-end;
@@ -523,3 +465,5 @@ footer{
         }
     }
 }
+
+@import "media";
