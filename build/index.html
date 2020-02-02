@@ -5,39 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- Bootstrap grid CSS -->
-    <link rel="stylesheet" href="build/css/bootstrap-grid.min.css">
+    <!-- Castom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
     <!-- Normalize.css -->
-    <link rel="stylesheet" href="build/css/normalize.css">
+    <!-- <link rel="stylesheet" href="build/css/normalize.css"> -->
 
     <!-- Castom styles for this template -->
     <link rel="stylesheet" href="build/css/style.min.css">
-
-    <!-- Castom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 
     <title>GRANIT</title>
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="row header">
-                <div class="col-md-7">
+            <div class="header">
+                <div class="header_item">
+                    <div class="humburger_menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="header_item header_logo">
                     <a href="#">
                         <img src="build/img/logo.png" alt="">
                     </a>
                 </div>
-                <div class="col-md-3">
-                    <div class="contacts">
-                        <h3>8 800 342-13-33</h3>
-                        <p>Бесплатный звонок по России</p>
-                    </div>
+                <div class="header_item header_tel">
+                    <h3>8 800 342-13-33</h3>
+                    <small>Бесплатный звонок по России</small>
                 </div>
-                <div class="col-md-2">
+                <div class="header_item header_btn">
                     <button class="btn_contacts">Обратный звонок</button>
                 </div>
-            </div> <!-- /.row header-->
+            </div> <!-- /.header -->
             <nav>
                 <ul class="nav_top">
                     <li><a href="#">Главная</a></li>
@@ -47,11 +49,10 @@
                     <li><a href="#">О компании</a></li>
                     <li><a href="#">Контакты</a></li>
                 </ul>
-            </nav> <!-- /nav -->
-        </div> <!-- /.container -->
-    </header> <!-- /header -->
+            </nav> <!-- /.nav -->
+        </div>
 
-    <div class="top">
+        <div class="top">
         <div class="container">
             <div class="top_info">
                 <div class="top_info_text">
@@ -61,10 +62,12 @@
                 <div class="top_info_link">
                     <button class="btn_top_info">Подробнее о доставке</button>
                     <div class="link_top_info">Или перейти в <a href="#">каталог</a>.</div>
-                </div>
-            </div> <!-- /.todiv class="link_top_info"_info -->
-        </div> <!-- /.container -->
+                </div> 
+            </div> 
+            <div class="link_top_info"></div>
+        </div> <!--  /.container -->
     </div> <!-- /.top -->
+    </header>
 
     <main class="wrapper">
         <div class="presence">
@@ -214,14 +217,14 @@
 
     <footer>
         <div class="container">
-            <div class="row footer">
-                <div class="col-md-6">
+            <div class="footer">
+                <div class="footer_item">
                     <a href="#">
                         <img src="build/img/footer/logo-footer.png" alt="Логотип">
                     </a>
-                    <small>© 2016. Гранти</small>
+                    <small>© 2016. Грант</small>
                 </div>
-                <div class="col-md-6">
+                <div class="footer_item">
                     <div class="footer_contacts">
                         <div class="footer_contacts-info">
                             <h3>8 800 342-13-33</h3>

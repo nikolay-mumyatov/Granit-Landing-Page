@@ -10,7 +10,7 @@ let gulp = require('gulp'),
     imagemin = require('gulp-imagemin'); // Минификация изображений.
 
 gulp.task('styles', () => { // Сбор, оптимизация и минификация SCSS.
-    return gulp .src('./app/scss/**/*.scss')
+    return gulp .src('./app/scss/style.scss')
                 .pipe(sourcemaps.init())
                 .pipe(concat('style.scss'))
                 .pipe(sass({
@@ -42,8 +42,6 @@ gulp.task('scripts', () => { // Сбор, оптимизация и минифи
 gulp.task('libs', () =>{ // Подключение библиотек
     return gulp .src('./node_modules/jquery/dist/jquery.min.js')
     .pipe(gulp.dest('./build/js')),
-    gulp.src('./node_modules/bootstrap/dist/css/bootstrap-grid.min.css')
-    .pipe(gulp.dest('./build/css')),
     gulp.src('./node_modules/normalize.css/normalize.css')
     .pipe(gulp.dest('./build/css'));
 });
