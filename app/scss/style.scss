@@ -199,15 +199,15 @@ header{
                 padding-top: 170px;
                 color: $white;
                 text-transform: uppercase;
-                font-size: 36px;
+                font-size: 42px;
                 opacity: 0.9;
                 margin: 0;
             }
             p{
                 margin-top: 30px;
-                max-width: 240px;
+                max-width: 340px;
                 color: $white;
-                font-size: 14px;
+                font-size: 18px;
                 opacity: 0.9;
             }
         }
@@ -274,7 +274,7 @@ header{
                 }
                 p{
                     color: $grey;
-                    font-size: 13px;
+                    font-size: 14px;
                 }
                 h3{
                     margin-top: 30px;
@@ -320,7 +320,7 @@ header{
                 }
                 p{
                     color: $grey;
-                    font-size: 13px;
+                    font-size: 14px;
                 }
                 h3{
                     margin-top: 30px;
@@ -505,6 +505,7 @@ header{
         }
     }
 }
+
 footer{
     background-color: $footer;
     padding: 40px;

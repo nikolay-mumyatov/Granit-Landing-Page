@@ -68,6 +68,14 @@
         }
         .top{
             margin-top: 30px;
+            &_info_text{
+                h1{
+                    font-size: 36px;
+                }
+                p{
+                    font-size: 16px;
+                }
+            }
         }
     }
 
@@ -105,6 +113,33 @@
 
 @media (max-width: 597px) {
 
+    .menu{
+        width: 130%;
+        height: 100vh;
+        ul{
+            padding: 0;
+            margin: 0;
+            line-height: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-between;
+            li{
+                a{
+                    font-size: 2rem;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+
+    .menu_active{
+        transform: translateX(-20%);
+        .humburger_menu{
+            height: 60%;
+        }
+    }
+
     header{
         .header{
             justify-content: flex-start;
@@ -131,6 +166,105 @@
                 small{
                     display: none;
                     color: $grey;
+                }
+            }
+        }
+        .top{
+        &_info_text{
+            h1{
+                padding-top: 170px;
+                color: $white;
+                text-transform: uppercase;
+                font-size: 36px;
+                opacity: 0.9;
+                margin: 0;
+            }
+            p{
+                margin-top: 30px;
+                max-width: 240px;
+                color: $white;
+                font-size: 14px;
+                opacity: 0.9;
+            }
+        }
+
+        &_info_link{
+            flex-wrap: wrap;
+            }
+            .link_top_info{
+                flex-basis: 100%;
+                margin: 0;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    footer{
+        background-color: $footer;
+        padding: 40px;
+        .footer{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            a{
+                display: block;
+                margin-bottom: 10px;
+                cursor: pointer;
+            }
+            small{
+                flex-direction: 3;
+                color: $white;
+                font-size: 10px;
+            }
+            &_contacts{
+                text-align: center;
+                line-height: 18px;
+                margin-top: 30px;
+                h3{
+                    font-size: 18px;
+                    color: $white;
+                }
+                p{
+                    font-size: 12px;
+                    color: $grey;
+                }
+                &_btn{
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .wrapper{
+        .presence{
+            .box{
+                &_item{
+                    padding: 10px;
+                }
+            }
+        }
+        .advantage{
+            .box{
+                &_item{
+                    flex: 0 0 250px;
+                    padding: 10px;
+                }
+            }
+        }
+        .popular_goods{
+            .box{
+                &_item{
+                    flex: 0 0 200px;
+                }
+            }
+        }
+        .service{
+            .box{
+                &_item{
+                    flex: 0 0 250px;
+                    padding: 18px 14px 18px 14px;
+                    margin: 10px;
                 }
             }
         }
