@@ -143,9 +143,14 @@ header{
                 border: 2px solid $black;
                 cursor: pointer;
                 background-color: $white;
-                transition: all 0.3s;
+                transition: all 0.1s;
+                outline: none;
                 &:hover{
                     background-color: $yellow;
+                }
+                &:active{
+                    background-color: $grey;
+                    color: $white;
                 }
             }
         }
@@ -217,6 +222,7 @@ header{
             display: flex;
             align-items: center;
             .btn_top_info{
+                position: relative;
                 padding: 16px 22px 16px 22px;
                 color: $black;
                 background-color: $yellow;
@@ -224,8 +230,14 @@ header{
                 border-radius: 6px;
                 cursor: pointer;
                 transition: all 0.2s;
+                outline: none;
                 &:hover{
                     background-color: rgb(255, 234, 0);
+                }
+                &:active {
+                    top: .1em;
+                    background-color: $yellow;
+                    box-shadow: 0 0 0 60px rgba(0,0,0,.05) inset;
                 }
             }
             .link_top_info{
@@ -286,8 +298,14 @@ header{
                     background-color: $yellow;
                     padding: 20px 56px 20px 56px;
                     cursor: pointer;
+                    outline: none;
                     &:hover{
                         background-color: rgb(255, 234, 0);
+                    }
+                    &:active {
+                        top: .1em;
+                        background-color: $yellow;
+                        box-shadow: 0 0 0 60px rgba(0,0,0,.05) inset;
                     }
                 }
             }
@@ -384,8 +402,14 @@ header{
                     padding: 16px 50px 16px 50px;
                     margin-top: 20px;
                     cursor: pointer;
+                    outline: none;
                     &:hover{
                         background-color: rgb(255, 234, 0);
+                    }
+                    &:active {
+                        top: .1em;
+                        background-color: $yellow;
+                        box-shadow: 0 0 0 60px rgba(0,0,0,.05) inset;
                     }
                 }
                 
@@ -542,9 +566,14 @@ footer{
                 color: $white;
                 background-color: $footer;
                 transition: all 0.3s;
+                outline: none;
                 &:hover{
                     background-color: $yellow;
                     color: $black;
+                }
+                &:active{
+                    background-color: $grey;
+                    color: $white;
                 }
             }
         }
